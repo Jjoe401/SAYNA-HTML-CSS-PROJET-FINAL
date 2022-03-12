@@ -1,0 +1,267 @@
+/*styl polices*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@font-face {
+  font-family: "free-fa-brands";
+  src: local("../Fonts/free-fa-brands-400.woff2") format("woff2");
+  font-family: "free_fa_regular";
+  src: local("../Fonts/free_fa_regular_400.woff2") format("woff2");
+  font-family: "free-fa-solid";
+  src: local("../Fonts/free-fa-solid-900.woff2") format("woff2");
+}
+
+/*initialisation du page*/
+*{
+	box-sizing: border-box;	/*le padding sera inclus dans le calcul du width et height*/
+	list-style-type: none;	/*pour ne pas mettre les puces dans les listes à puces*/
+	line-height: 1.5em;	/*interligne*/
+}
+
+body{
+	margin: 0;
+	font-family: "free_fa_regular", 'Roboto', serif;
+}
+
+/* en tete*/
+header{
+	display: flex;
+	background-color: #d35649;
+	padding: 1em 0.7em 0.5em 0.7em;
+	justify-content: space-between;
+	height: 20%;
+	color: white;
+}
+
+/*logo*/
+.logo{
+	width: 10%;
+	display: flex;
+	align-items: flex-end;
+	margin: 0.4em 0;
+	height: fit-content;
+}
+
+.logo img{
+	width: 40%;
+}
+
+.logo a{
+	text-decoration: none;
+	font-weight: normal;
+	text-shadow: 2px 2px #575a89;
+	color: inherit;
+}
+
+.logo h1{
+	width: 60%;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	text-shadow: 2px 2px #575a89;
+	text-align: end;
+	font-size: 1.3em;
+} 
+
+.menu{
+	width: 35%;
+	display: flex;
+	align-items: center;
+	margin: 0.5em 0;
+}
+
+/*navigation menu*/
+.menu ul{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
+}
+
+.menu li{
+	width: 20%;
+}
+.menuButton {
+	font-size: small;
+	color: white;
+	margin: auto;
+}
+
+header .menuButton a{
+	color: inherit;
+	display: grid;
+	grid-template-columns: 3em 5em;	
+	grid-template-rows: 2em; 
+	justify-content: space-between;
+	text-decoration: none;
+}
+
+.menuButton img{
+	width: 40%;
+	grid-row: 1; 
+	grid-column: 1/2;	
+}
+.menuButton span{
+	width: 65%;
+	grid-row: 1;
+	grid-column: 2/2;
+}
+
+/*animations*/
+.normal{
+	opacity: 1;
+}
+
+.survol {
+	opacity: 1;
+}
+
+.survol:hover {
+	opacity: 1;
+}
+
+.normal:hover{
+	opacity: 0;
+}
+
+/*animations 2*/
+.menuButton:hover{	/*valable pour header et footer*/
+	color: #98a5a5;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+/*footer*/
+footer{
+	height: 40%;
+}
+
+/*footer avec fond noir*/
+.informations{
+	background-color: black;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+/*petit menu(home, about etc)*/
+.infoBloc1{
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	margin: 3em 25%;
+}
+
+footer a{
+	color: #d35649;
+	text-decoration: none;
+}
+
+.left, .right{
+	margin: auto;
+	width: 100%;	
+}
+
+footer .menuButton a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.surrounded{
+	display: grid;
+	grid-template-columns: 6em;
+}
+
+.surrounded img{
+	grid-column: 1;
+	grid-row: 1;
+	width: 6em;
+	height: 6em;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 2em;
+}
+
+.framed ul{
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	font-weight: bold;
+}
+
+/*subscribe, contact about*/
+.infoBloc2{
+	display: flex;
+	justify-content: space-around;
+	padding: 0.5em 1em;
+}
+
+/*Subscribe, contact, about blocs*/
+.infoBloc{
+	width: 30%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.infoBloc h3{
+	margin: 1em 0;
+	font-size: 1.5em;
+}
+
+.infoBloc form{
+	display: flex;
+	align-items: flex-end;
+	font-size: 0;
+	width: 100%;
+	height: 10vh;
+}
+
+.infoBloc #email{
+	height: 95%;
+	background-color: black;
+	border: 0.5px solid #444;
+	color: #444;
+	padding: 0.5em;
+	width: 65%;
+	font-size: smaller;
+}
+
+/*send button*/
+.infoBloc .send{
+	width: 25%;
+	height: 95%;
+	background-color: #444;
+	border: 0.01px solid #888;
+	border-radius: 7%;
+	color: white;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.infoBloc p{
+	font-size: smaller;
+}
+
+/*footer evc fond gris*/
+.copyright{
+	background-color: #444;
+	height: 15%;
+	display: flex;
+	justify-content: space-between;
+	color: #aaa;
+}
+
+.copyright div{
+	margin: 0.3em;
+}
+.socialMedia{
+	width: 0.7em;
+	margin: 0 0.7em;
+}
+
+.copyrightText small{
+	color: #eee;
+	font-size: 0.7em;
+}
