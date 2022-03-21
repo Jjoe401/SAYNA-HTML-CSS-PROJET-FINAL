@@ -1,4 +1,4 @@
-/*styl polices*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 @font-face {
   font-family: "free-fa-brands";
@@ -9,19 +9,17 @@
   src: local("../Fonts/free-fa-solid-900.woff2") format("woff2");
 }
 
-/*initialisation du page*/
+
 *{
-	box-sizing: border-box;	/*le padding sera inclus dans le calcul du width et height*/
-	list-style-type: none;	/*pour ne pas mettre les puces dans les listes à puces*/
-	line-height: 1.5em;	/*interligne*/
+	box-sizing: border-box;	
+	list-style-type: none;	
+	line-height: 1.5em;	
 }
 
 body{
 	margin: 0;
 	font-family: "free_fa_regular", 'Roboto', serif;
 }
-
-/* en tete*/
 header{
 	display: flex;
 	background-color: #d35649;
@@ -31,7 +29,15 @@ header{
 	color: white;
 }
 
-/*logo*/
+header .menuButton a{
+	color: inherit;
+	display: grid;
+	grid-template-columns: 3em 5em;	
+	grid-template-rows: 2em; 
+	justify-content: space-between;
+	text-decoration: none;
+}
+
 .logo{
 	width: 10%;
 	display: flex;
@@ -68,7 +74,7 @@ header{
 	margin: 0.5em 0;
 }
 
-/*navigation menu*/
+
 .menu ul{
 	display: flex;
 	margin: 0;
@@ -85,14 +91,6 @@ header{
 	margin: auto;
 }
 
-header .menuButton a{
-	color: inherit;
-	display: grid;
-	grid-template-columns: 3em 5em;	
-	grid-template-rows: 2em; 
-	justify-content: space-between;
-	text-decoration: none;
-}
 
 .menuButton img{
 	width: 40%;
@@ -105,7 +103,7 @@ header .menuButton a{
 	grid-column: 2/2;
 }
 
-/*animations*/
+
 .normal{
 	opacity: 1;
 }
@@ -121,8 +119,6 @@ header .menuButton a{
 .normal:hover{
 	opacity: 0;
 }
-
-/*animations 2*/
 .menuButton:hover{	/*valable pour header et footer*/
 	color: #98a5a5;
 }
@@ -131,12 +127,12 @@ footer a:hover{
 	text-decoration: underline;
 }
 
-/*footer*/
+
 footer{
 	height: 40%;
 }
 
-/*footer avec fond noir*/
+
 .informations{
 	background-color: black;
 	height: fit-content;
@@ -145,7 +141,6 @@ footer{
 	color: white;
 }
 
-/*petit menu(home, about etc)*/
 .infoBloc1{
 	display: flex;
 	justify-content: space-around;
@@ -190,14 +185,34 @@ footer .menuButton a{
 	font-weight: bold;
 }
 
-/*subscribe, contact about*/
+
 .infoBloc2{
 	display: flex;
 	justify-content: space-around;
 	padding: 0.5em 1em;
 }
+.copyright{
+	background-color: #444;
+	height: 15%;
+	display: flex;
+	justify-content: space-between;
+	color: #aaa;
+}
 
-/*Subscribe, contact, about blocs*/
+.copyright div{
+	margin: 0.3em;
+}
+.socialMedia{
+	width: 0.7em;
+	margin: 0 0.7em;
+}
+
+.copyrightText small{
+	color: #eee;
+	font-size: 0.7em;
+}
+
+
 .infoBloc{
 	width: 30%;
 	display: flex;
@@ -228,7 +243,7 @@ footer .menuButton a{
 	font-size: smaller;
 }
 
-/*send button*/
+
 .infoBloc .send{
 	width: 25%;
 	height: 95%;
@@ -244,24 +259,4 @@ footer .menuButton a{
 	font-size: smaller;
 }
 
-/*footer evc fond gris*/
-.copyright{
-	background-color: #444;
-	height: 15%;
-	display: flex;
-	justify-content: space-between;
-	color: #aaa;
-}
 
-.copyright div{
-	margin: 0.3em;
-}
-.socialMedia{
-	width: 0.7em;
-	margin: 0 0.7em;
-}
-
-.copyrightText small{
-	color: #eee;
-	font-size: 0.7em;
-}
